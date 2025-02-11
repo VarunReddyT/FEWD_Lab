@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        table {
+            width: 80%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        td img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .details-container {
+            width: 50%;
+            margin: 20px auto;
+            padding: 15px;
+            background: white;
+            border: 1px solid #ddd;
+        }
+        .view-btn {
+            background: #28a745;
+            color: white;
+            padding: 8px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Students</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Upload CV</th>
+                <th>View Details</th>
+            </tr>
+        </thead>
+        <tbody id="studentTable"></tbody>
+    </table>
+
+    <div class="details-container">
+        <h3>Student Details</h3>
+        <p><strong>Name:</strong> <span id="name"></span></p>
+        <p><strong>Year:</strong> <span id="year"></span></p>
+        <p><strong>CGPA:</strong> <span id="cgpa"></span></p>
+    </div>
+
+    <script>
+        async function loadStudents() {
+            try {
+                const response = await fetch('students.json'); 
+                const students = await response.json();
+                const table = document.getElementById("studentTable");
+                table.innerHTML = "";
+
+                students.forEach(student => {
+                    const row = document.createElement("tr");
+                    row.innerHTML = `
+                        <td>${student.id}</td>
+                        <td>${student.name}</td>
+                        <td><img src="${student.image}" alt="${student.name}"></td>
+                        <td>
+                            <input type="file" accept=".pdf" onchange="uploadCV(event, 'cv${student.id}')">
+                            <span id="cv${student.id}"></span>
+                        </td>
+                        <td><button class="view-btn" onclick="handleDetails('${student.name}', ${student.year}, ${student.cgpa})">View</button></td>
+                    `;
+                    table.appendChild(row);
+                });
+            } catch (error) {
+                console.error("Error loading student data:", error);
+            }
+        }
+
+        function uploadCV(event, id) {
+            var file = event.target.files[0];
+            if (file) {
+                document.getElementById(id).innerText = file.name;
+            }
+        }
+
+        function handleDetails(name, year, cgpa) {
+            document.getElementById("name").innerText = name;
+            document.getElementById("year").innerText = year;
+            document.getElementById("cgpa").innerText = cgpa;
+        }
+
+        loadStudents();
+    </script>
+
+</body>
+</html>

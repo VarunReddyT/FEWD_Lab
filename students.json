@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "name": "Student 1",
+      "image": "1.jpg",
+      "year": 3,
+      "cgpa": 9.4
+    },
+    {
+      "id": 2,
+      "name": "Student 2",
+      "image": "2.jpg",
+      "year": 4,
+      "cgpa": 8.4
+    }
+  ]
+  

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+</head>
+<body>
+    <form>
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" required>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+        <label for="phone">Phone</label>
+        <input type="tel" name="phone" id="phone" required>
+        <button type="submit" onclick="handleSignup()">Login</button>
+    </form>
+    <script>
+        function handleSignup() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            alert(`You signed up with ${username}, ${password}, ${email}, ${phone}`);
+        }
+    </script>
+</body>
+</html>

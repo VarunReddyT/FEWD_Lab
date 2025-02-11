@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+</head>
+<body>
+    <form>
+        <input type="text" placeholder="Search" id="search" />
+        <button type="submit" onclick="handleSearch()">Search</button>
+    </form>
+    <script>
+        function handleSearch() {
+            const search = document.getElementById('search').value;
+            alert(`You searched for ${search}`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!-- Problem-2
+Create a Portfolio page using HTML , it should contain 
+-> Self introduction
+-> skills 
+-> projects/work experiences (Git links)
+-> Feedback /achivements
+-> Education profile 
+-> Contact information.(Social media /phone /email) -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <nav style="margin : 0 auto; width: 90%; background-color: #f1f1f1; padding: 10px; text-align: center; display: flex; justify-content: space-around;">
+        <a href="#self-intro" style="text-decoration: none;">Introduction</a>
+        <a href="#skills" style="text-decoration: none;">Skills</a>
+        <a href="#projects" style="text-decoration: none;">Projects</a>
+        <a href="#achievements" style="text-decoration: none;">Achievements</a>
+        <a href="#feedback-form" style="text-decoration: none;">Feedback Form</a>
+        <a href="#contact-me" style="text-decoration: none;">Contact Me</a>
+    </nav>
+    <div>
+        <section style="margin-top: 50px; width: 90%; margin: 0 auto;">
+            <h1 id="self-intro">Introduction</h1>
+            <p id="self-intro-text">
+            </p>
+        </section>
+        <hr/>
+        <section style="margin-top: 30px; width: 90%; margin: 0 auto;">
+            <h1 id="skills">Skills</h1>
+            <ul id="skills-list">
+                
+            </ul>
+        </section>
+        <hr/>
+        <section style="margin-top: 30px; width : 90%; margin : 0 auto;">
+            <h1 id="projects">Projects</h1>
+            <ul id="project-list">
+                
+            </ul>
+            
+        </section>
+        <hr/>
+        <section style="margin-top: 30px; width : 90%; margin : 0 auto;">
+            <h1 id="achievements">Achievements</h1>
+            <ul id="achievements-list">
+                
+            </ul>
+        </section>
+        <hr/>
+        <section style="margin-top: 30px; width : 90%; margin : 0 auto;">
+            <h1 id="feedback-form">Feedback Form</h1>
+            <form > 
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+                <label for="feedback">Feedback</label>
+                <textarea name="feedback" id="feedback" required></textarea>
+                <button type="submit" onclick="handleFeedback()">Submit</button>
+            </form>
+        </section>
+        <hr/>
+        <section style="margin-top: 30px; width : 90%; margin : 0 auto; margin-bottom: 50px;">
+            <h1 id="contact-me">Contact Me</h1>
+            <p>Email: <a href="mailto:tvarun2014@gmail.com">tvarun2014@gmail.com</a></p>
+            <p>Phone: 9618443777</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/varun-reddy-231244253/">Varun Reddy</a></p>
+        </section>
+    </div>
+    <script>
+        function handleFeedback(){
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const feedback = document.getElementById('feedback').value;
+            if(name === '' || email === '' || feedback === ''){
+                alert('Please fill all the fields');
+                return;
+            }
+            alert(`Feedback submitted -> Name : ${name}, Email : ${email}, Feedback : ${feedback}`);
+        }
+        async function fetchData() {
+            const response = await fetch('./data.json');
+            const data = await response.json();
+
+            const introduction = document.getElementById('self-intro-text');
+            introduction.innerHTML = data.introduction;
+
+            const skills = document.getElementById('skills-list');
+            data.skills.forEach(skill => {
+                const li = document.createElement('li');
+                li.innerHTML = skill;
+                skills.appendChild(li);
+            });
+
+            const projects = document.getElementById('project-list');
+            data.projects.forEach(project => {
+                const section = document.createElement('section');
+                section.innerHTML = `<li><h2>${project.name}</h2><p>${project.description}</p></li>`;
+                projects.appendChild(section);
+            });
+
+            const achievements = document.getElementById('achievements-list');
+            data.achievements.forEach(achievement => {
+                const li = document.createElement('li');
+                li.innerHTML = achievement;
+                achievements.appendChild(li);
+            });
+
+        }
+        fetchData();
+    </script>
+</body>
+
+</html>
