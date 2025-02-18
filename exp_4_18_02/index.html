@@ -1,0 +1,193 @@
+<!-- Problem-2
+update a Portfolio page using internal CSS , it should contain 
+-> Self introduction
+-> skills 
+-> projects/work experiences (Git links)
+-> Feedback /achivements
+-> Education profile 
+-> Contact information.(Social media /phone /email)
+
+Note: add Internal CSS -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        nav {
+            background-color: #343a40;
+            padding: 15px;
+            text-align: center;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-around;
+            border-radius: 40px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        section {
+            width: 90%;
+            margin: 20px auto 10px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #007bff;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background: #e9ecef;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            padding: 0;
+        }
+        .skills-grid li {
+            text-align: center;
+            background: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #343a40;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#self-intro">Introduction</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#feedback-form">Feedback</a>
+        <a href="#contact-me">Contact</a>
+    </nav>
+    
+    <section id="self-intro">
+        <h1>Introduction</h1>
+        <p id="self-intro-text"></p>
+    </section>
+    
+    <section id="skills">
+        <h1>Skills</h1>
+        <ul id="skills-list" class="skills-grid"></ul>
+    </section>
+    
+    <section id="projects">
+        <h1>Projects</h1>
+        <ul id="project-list"></ul>
+    </section>
+    
+    <section id="achievements">
+        <h1>Achievements</h1>
+        <ul id="achievements-list"></ul>
+    </section>
+    
+    <section id="feedback-form">
+        <h1>Feedback Form</h1>
+        <form onsubmit="handleFeedback(event)">
+            <label for="name">Name</label>
+            <input type="text" id="name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+            
+            <label for="feedback">Feedback</label>
+            <textarea id="feedback" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    
+    <section id="contact-me">
+        <h1>Contact Me</h1>
+        <p>Email: <a href="mailto:tvarun2014@gmail.com">tvarun2014@gmail.com</a></p>
+        <p>Phone: 9618443777</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/varun-reddy-231244253/">Varun Reddy</a></p>
+    </section>
+    
+    <footer>
+        &copy; 2025 Varun Reddy. All rights reserved.
+    </footer>
+    
+    <script>
+        function handleFeedback(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const feedback = document.getElementById('feedback').value;
+            alert(`Feedback submitted -> Name: ${name}, Email: ${email}, Feedback: ${feedback}`);
+        }
+        
+        async function fetchData() {
+            try {
+                const response = await fetch('./data.json');
+                const data = await response.json();
+                
+                document.getElementById('self-intro-text').innerHTML = data.introduction;
+                
+                data.skills.forEach(skill => {
+                    const li = document.createElement('li');
+                    li.textContent = skill;
+                    document.getElementById('skills-list').appendChild(li);
+                });
+                
+                data.projects.forEach(project => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `<strong>${project.name}</strong>: ${project.description}<div><strong><a href=${project.link} target="_blank">View Project</a></strong></div>`;
+                    document.getElementById('project-list').appendChild(li);
+                });
+                
+                data.achievements.forEach(achievement => {
+                    const li = document.createElement('li');
+                    li.textContent = achievement;
+                    document.getElementById('achievements-list').appendChild(li);
+                });
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            }
+        }
+        fetchData();
+    </script>
+</body>
+</html>

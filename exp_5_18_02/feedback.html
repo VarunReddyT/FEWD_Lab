@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Feedback Form</h1>
+        <form id="feedbackForm">
+            <div class="form-group">
+                <label for="name">Name (optional)</label>
+                <input type="text" id="name" name="name" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email (optional)</label>
+                <input type="email" id="email" name="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number (optional)</label>
+                <input type="text" id="phone" name="phone" placeholder="Phone">
+            </div>
+            <div class="form-group">
+                <label for="rating">Rating: <span class="asterisk">*</span></label>
+                <select name="rating" id="rating" required>
+                    <option value="">Select Rating</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question">Any Questions regarding product or service? <span class="asterisk">*</span></label>
+                <textarea name="question" id="question" placeholder="Your question" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="comments">Additional comments (optional)</label>
+                <textarea name="comments" id="comments" placeholder="Additional comments"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById("feedbackForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const rating = document.getElementById("rating").value;
+            const question = document.getElementById("question").value;
+            const comments = document.getElementById("comments").value;
+    
+            alert(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nRating: ${rating}\nQuestion: ${question}\nComments: ${comments}`);
+        });
+    </script>
+</body>
+</html>
