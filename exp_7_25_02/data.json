@@ -1,0 +1,51 @@
+{
+    "introduction": "Hi, I am Varun Reddy. I am a web developer. I am currently pursuing my B.Tech in Computer Science Engineering. I am passionate about coding and I love to learn new things.",
+    "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Python",
+        "C",
+        "C++",
+        "Java"
+    ],
+    "projects": [
+        {
+            "name": "Tires on Highways",
+            "description": "A web application analyzes tire conditions through images captured at toll plazas, achieving 85% accuracy in detecting worn-out or unsafe tires. It alerts vehicle owners via SMS, contributing to improved road safety.",
+            "link" : "https://github.com/VarunReddyT/TiresOnHighways"
+        },
+        {
+            "name": "Tech for Autism and Dyslexia",
+            "description": "Leading the development of interactive games for children with Autism and Dyslexia. Built a website for parents, therapists, doctors, and centers to view and manage children's reports, successfully digitizing 95% of handwritten reports and game data and enhancing report accessibility and management.",
+            "link" : "https://github.com/TechForAutismDyslexia/Frontend"
+        },
+        {
+            "name": "Petrol Tracker",
+            "description": "A petrol tracking app that lets users log bike readings, fuel details, and monitor mileage, total kilometers, and expenses. It also features insightful graphs for performance analysis.",
+            "link" : "https://github.com/VarunReddyT/PetrolNative"
+        }
+    ],
+    "achievements" : ["Google Cloud Computing Foundations and Generative AI certificate", "Attended Amazon ML Summer School 2024", "Contributed to open source in GirlScript Summer of Code 2024", "Certified as a Postman API Fundamentals Student Expert"],
+    "education" : [
+        {
+            "degree": "B.Tech in Computer Science Engineering",
+            "institution": "Keshav Memorial Institute of Technology",
+            "year": "2022-2026"
+        },
+        {
+            "degree": "Intermediate",
+            "institution": "Resonance Junior College",
+            "year": "2020 - 2022"
+        },
+        {
+            "degree": "High School",
+            "institution": "Johnson Grammar School",
+            "year": "2010-2020"
+        }
+    ]
+}
