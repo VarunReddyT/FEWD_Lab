@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEase - Gallery</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css">
+  <style>
+    .gallery-img {
+      width: 100%; /* Ensures responsiveness */
+      max-width: 250px; /* Adjust as needed */
+      height: auto; /* Maintains aspect ratio */
+      display: block;
+      margin: 0 auto; /* Centers the image */
+    }
+    
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-warning  sticky-top">
+    <div class="container">
+      <a class="navbar-brand text-black" href="index.html">ShopEase</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active text-black" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black" href="products.html">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black" href="partners.html">Partners</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <button class="btn btn-outline-secondary text-black" data-bs-toggle="modal" data-bs-target="#loginModal">
+            <i class="bi bi-person-fill me-1 text-black"></i>Login
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-light py-5">
+    <div class="container px-4 px-lg-5">
+      <div class="text-center text-dark">
+        <h1 class="display-4 fw-bolder">Product Gallery</h1>
+        <p class="lead fw-normal text-dark-50 mb-0">Explore our products in action</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="py-5">
+    <div class="container">
+
+      <!-- Gallery Grid -->
+      <section class="gallery-container">
+        <div class="row">
+          <!-- Gallery Item 1 -->
+          <div class="col-md-6 col-lg-4 gallery-item filter-headphones">
+              <img src="./images/gallery1.jpeg" alt="Premium Headphones" class="gallery-img">
+              <div class="mt-2">
+                <h5>Premium Noise-Cancelling Headphones</h5>
+                <p class="text-muted">Experience crystal clear sound with our premium headphones</p>
+              </div>
+          </div>
+
+          <!-- Gallery Item 2 -->
+          <div class="col-md-6 col-lg-4 gallery-item filter-watches">
+              <img src="./images/gallery2.jpeg" alt="Smart Watch" class="gallery-img">
+              <div class="mt-2">
+                <h5>Smart Watch Pro</h5>
+                <p class="text-muted">Track your fitness and stay connected with our latest smart watch</p>
+              </div>
+          </div>
+
+          <!-- Gallery Item 3 -->
+          <div class="col-md-6 col-lg-4 gallery-item filter-speakers">
+              <img src="./images/gallery3.jpeg" alt="Bluetooth Speaker" class="gallery-img">
+              <div class="mt-2">
+                <h5>Portable Bluetooth Speaker</h5>
+                <p class="text-muted">Take your music anywhere with our waterproof portable speaker</p>
+              </div>
+          </div>
+
+          <!-- Gallery Item 4 -->
+          <div class="col-md-6 col-lg-4 gallery-item filter-headphones">
+              <img src="./images/gallery4.jpeg" alt="Wireless Earbuds" class="gallery-img">
+              <div class="mt-2">
+                <h5>Wireless Earbuds</h5>
+                <p class="text-muted">Enjoy music on the go with our comfortable wireless earbuds</p>
+              </div>
+          </div>
+
+          <!-- Gallery Item 5 -->
+          <div class="col-md-6 col-lg-4 gallery-item filter-accessories">
+              <img src="./images/gallery5.jpeg" alt="Phone Case" class="gallery-img">
+              <div class="mt-2">
+                <h5>Premium Phone Case</h5>
+                <p class="text-muted">Protect your device with our stylish and durable phone cases</p>
+              </div>
+          </div>
+
+          <!-- Gallery Item 6 -->
+          <div class="col-md-6 col-lg-4 gallery-item filter-watches">
+              <img src="./images/gallery6.jpeg" alt="Fitness Tracker" class="gallery-img">
+              <div class="mt-2">
+                <h5>Fitness Tracker</h5>
+                <p class="text-muted">Track your workouts, heart rate, and sleep with our advanced fitness tracker</p>
+              </div>
+          </div>
+
+          <!-- Gallery Item 7 -->
+          <div class="col-md-6 col-lg-4 gallery-item filter-events">
+              <img src="./images/gallery7.jpeg" alt="Product Launch Event" class="gallery-img">
+              <div class="mt-2">
+                <h5>Product Launch Event</h5>
+                <p class="text-muted">Highlights from our latest product launch event</p>
+              </div>
+          </div>
+
+          <!-- Gallery Item 8 -->
+          <div class="col-md-6 col-lg-4 gallery-item filter-speakers">
+              <img src="./images/gallery8.jpeg" alt="Home Theater System" class="gallery-img">
+              <div class="mt-2">
+                <h5>Home Theater System</h5>
+                <p class="text-muted">Transform your living room with our immersive home theater system</p>
+              </div>
+          </div>
+
+          <!-- Gallery Item 9 -->
+          <div class="col-md-6 col-lg-4 gallery-item filter-accessories">
+              <img src="./images/gallery9.jpeg" alt="Wireless Charging Pad" class="gallery-img">
+              <div class="mt-2">
+                <h5>Wireless Charging Pad</h5>
+                <p class="text-muted">Charge your devices effortlessly with our sleek wireless charging pad</p>
+              </div>
+          </div>
+
+          <!-- Gallery Item 10 -->
+          <div class="col-md-6 col-lg-4 gallery-item filter-events">
+              <img src="./images/gallery10.jpeg" alt="Tech Workshop" class="gallery-img">
+              <div class="mt-2">
+                <h5>Tech Workshop</h5>
+                <p class="text-muted">Scenes from our recent tech workshop and customer education event</p>
+              </div>
+          </div>
+
+          <!-- Gallery Item 11 -->
+          <div class="col-md-6 col-lg-4 gallery-item filter-headphones">
+              <img src="./images/gallery11.jpeg" alt="Gaming Headset" class="gallery-img">
+              <div class="mt-2">
+                <h5>Gaming Headset</h5>
+                <p class="text-muted">Immerse yourself in gaming with our high-performance gaming headset</p>
+              </div>
+          </div>
+
+          <!-- Gallery Item 12 -->
+          <div class="col-md-6 col-lg-4 gallery-item filter-accessories">
+              <img src="./images/gallery12.jpeg" alt="Power Bank" class="gallery-img">
+              <div class="mt-2">
+                <h5>Power Bank</h5>
+                <p class="text-muted">Stay charged on the go with our high-capacity power bank</p>
+              </div>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <button id="prevPage" class="btn btn-outline-primary">Previous</button>
+          <span id="pageNumber" class="mx-3"></span>
+          <button id="nextPage" class="btn btn-outline-primary">Next</button>
+        </div>
+      </section>
+      <!-- User Gallery Section -->
+      <section class="mb-5">
+        <div class="card border-0 shadow-sm">
+          <div class="card-body p-4">
+            <h2 class="text-center mb-4">Share Your Experience</h2>
+            <p class="text-center mb-4">We love seeing our products in action! Share your photos with us using #ShopEase
+              on social media or upload them directly here.</p>
+
+            <form class="mb-4">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <input type="text" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6">
+                  <input type="email" class="form-control" placeholder="Your Email" required>
+                </div>
+                <div class="col-12">
+                  <select class="form-select">
+                    <option selected>Select Product Category</option>
+                    <option value="1">Headphones</option>
+                    <option value="2">Smart Watches</option>
+                    <option value="3">Speakers</option>
+                    <option value="4">Accessories</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <div class="input-group">
+                    <input type="file" class="form-control" id="inputGroupFile" accept="image/*">
+                    <label class="input-group-text" for="inputGroupFile">Upload</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <textarea class="form-control" rows="3"
+                    placeholder="Tell us about your experience with the product"></textarea>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="shareConsent" required>
+                    <label class="form-check-label" for="shareConsent">
+                      I consent to ShopEase using my photos on their website and social media
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 text-center">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h5>ShopEase</h5>
+          <p>Your one-stop shop for premium electronics and accessories. We provide quality products at competitive
+            prices.</p>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-white"><i class="bi bi-facebook fs-4"></i></a>
+            <a href="#" class="text-white"><i class="bi bi-twitter fs-4"></i></a>
+            <a href="#" class="text-white"><i class="bi bi-instagram fs-4"></i></a>
+            <a href="#" class="text-white"><i class="bi bi-linkedin fs-4"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white">Home</a></li>
+            <li><a href="about.html" class="text-white">About Us</a></li>
+            <li><a href="products.html" class="text-white">Products</a></li>
+            <li><a href="contact.html" class="text-white">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h5>Products</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Headphones</a></li>
+            <li><a href="#" class="text-white">Smart Watches</a></li>
+            <li><a href="#" class="text-white">Speakers</a></li>
+            <li><a href="#" class="text-white">Accessories</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h5>Contact Info</h5>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-geo-alt me-2"></i> 123 Commerce St, New York, NY 10001</li>
+            <li><i class="bi bi-telephone me-2"></i> (123) 456-7890</li>
+            <li><i class="bi bi-envelope me-2"></i> info@shopease.com</li>
+            <li><i class="bi bi-clock me-2"></i> Mon-Fri: 9AM-6PM, Sat: 10AM-4PM</li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0">&copy; 2023 ShopEase. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <a href="#" class="text-white me-3">Privacy Policy</a>
+          <a href="#" class="text-white me-3">Terms of Service</a>
+          <a href="#" class="text-white">FAQ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Login to Your Account</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="loginEmail" required>
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">Password</label>
+              <input type="password" class="form-control" id="loginPassword" required>
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="rememberMe">
+              <label class="form-check-label" for="rememberMe">Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+          </form>
+          <div class="text-center mt-3">
+            <a href="#" class="text-decoration-none">Forgot password?</a>
+          </div>
+          <hr>
+          <div class="text-center">
+            <p>Don't have an account? <a href="#" class="text-decoration-none">Register now</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Lightbox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const itemsPerPage = 6;
+      let currentPage = 1;
+      const galleryItems = document.querySelectorAll(".gallery-item");
+      const totalPages = Math.ceil(galleryItems.length / itemsPerPage);
+      const pageNumber = document.getElementById("pageNumber");
+      const prevButton = document.getElementById("prevPage");
+      const nextButton = document.getElementById("nextPage");
+  
+      function showPage(page) {
+        galleryItems.forEach((item, index) => {
+          item.style.display = (index >= (page - 1) * itemsPerPage && index < page * itemsPerPage) ? "block" : "none";
+        });
+        pageNumber.textContent = `Page ${page} of ${totalPages}`;
+        prevButton.disabled = page === 1;
+        nextButton.disabled = page === totalPages;
+      }
+  
+      prevButton.addEventListener("click", () => {
+        if (currentPage > 1) {
+          currentPage--;
+          showPage(currentPage);
+        }
+      });
+  
+      nextButton.addEventListener("click", () => {
+        if (currentPage < totalPages) {
+          currentPage++;
+          showPage(currentPage);
+        }
+      });
+  
+      showPage(currentPage); // Initialize first page
+    });
+  </script>
+  <script>
+    document.querySelector("form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Thank you for sharing your experience with us!");
+    });
+  </script>
+</body>
+
+</html>
