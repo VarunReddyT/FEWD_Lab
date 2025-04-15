@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 56px;
+        }
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        section {
+            padding: 60px 0;
+        }
+        .section-title {
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #eee;
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar-example">
+    <!-- Navigation -->
+     <h1>Abcd</h1>
+    <nav id="navbar-example" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#objective">Objective</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#academics">Academics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#achievements">Achievements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#personal">Personal</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header id="about" class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <img src="https://via.placeholder.com/200" alt="Profile Image" class="profile-img rounded-circle mb-4">
+            <h1 class="display-4">John Doe</h1>
+            <p class="lead">Web Developer & Designer</p>
+        </div>
+    </header>
+
+    <!-- Contact Information Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Contact Information</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <p class="card-text"><strong>Email:</strong> john.doe@example.com</p>
+                            <p class="card-text"><strong>Mobile:</strong> +1 (123) 456-7890</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Objective Section -->
+    <section id="objective" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Career Objective</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <p class="lead text-center">
+                        To obtain a challenging position in a reputable organization to expand my learnings, knowledge, and skills.
+                        Secure a responsible career opportunity to fully utilize my training and skills, while making a significant 
+                        contribution to the success of the company.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Information Section -->
+    <section id="academics" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Academic Information</h2>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Degree</th>
+                            <th>Institution</th>
+                            <th>Year</th>
+                            <th>Percentage/GPA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Master of Computer Applications</td>
+                            <td>ABC University</td>
+                            <td>2022</td>
+                            <td>3.8/4.0</td>
+                        </tr>
+                        <tr>
+                            <td>Bachelor of Science</td>
+                            <td>XYZ College</td>
+                            <td>2020</td>
+                            <td>85%</td>
+                        </tr>
+                        <tr>
+                            <td>Higher Secondary</td>
+                            <td>PQR School</td>
+                            <td>2017</td>
+                            <td>92%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Technical Skills</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-header bg-dark text-white">
+                            <h5 class="mb-0">Programming Languages</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">JavaScript</li>
+                                <li class="list-group-item">Python</li>
+                                <li class="list-group-item">Java</li>
+                                <li class="list-group-item">C++</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-header bg-dark text-white">
+                            <h5 class="mb-0">Databases</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">MySQL</li>
+                                <li class="list-group-item">MongoDB</li>
+                                <li class="list-group-item">PostgreSQL</li>
+                                <li class="list-group-item">Firebase</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-header bg-dark text-white">
+                            <h5 class="mb-0">Web Technologies</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">HTML5 & CSS3</li>
+                                <li class="list-group-item">React.js</li>
+                                <li class="list-group-item">Node.js</li>
+                                <li class="list-group-item">Bootstrap</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Projects</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <ol class="list-group list-group-numbered">
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">E-Commerce Website</div>
+                                Developed a full-stack e-commerce platform with React, Node.js, and MongoDB
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Task Management App</div>
+                                Created a task management application with user authentication using Firebase
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Weather Dashboard</div>
+                                Built a weather application that fetches data from a third-party API
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Portfolio Website</div>
+                                Designed and developed a responsive personal portfolio website
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Achievements</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <ol class="list-group list-group-numbered">
+                        <li class="list-group-item">Won first prize in National Level Coding Competition (2021)</li>
+                        <li class="list-group-item">Published a research paper on Machine Learning in IEEE Journal (2020)</li>
+                        <li class="list-group-item">Certified in Full Stack Development by ABC Institute (2019)</li>
+                        <li class="list-group-item">Selected for Google Summer of Code (2018)</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strengths Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Strengths</h2>
+            <div class="row">
+                <div class="col-lg-6 mx-auto">
+                    <ul class="list-group">
+                        <li class="list-group-item">Quick Learner</li>
+                        <li class="list-group-item">Problem Solving Skills</li>
+                        <li class="list-group-item">Team Player</li>
+                        <li class="list-group-item">Adaptability</li>
+                        <li class="list-group-item">Time Management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Profile Section -->
+    <section id="personal" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Personal Profile</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>Current Location</th>
+                            <td>New York, USA</td>
+                        </tr>
+                        <tr>
+                            <th>Date of Birth</th>
+                            <td>15th June 1995</td>
+                        </tr>
+                        <tr>
+                            <th>Languages Known</th>
+                            <td>English, Spanish, French</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0">&copy; 2023 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

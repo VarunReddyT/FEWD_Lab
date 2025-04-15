@@ -1,0 +1,30 @@
+<!--portfolio page 
+Objective: Create a personal portfolio web page using HTML.
+
+Requirements:
+
+Design a personal portfolio page using HTML tags.
+
+Include the following sections:
+
+Header with your name and profile image.
+
+Contact Information (Email and Mobile Number).
+
+Career Objective.
+
+Academic Information (Table format).
+
+Technical Skills (Lists for Programming Languages, Databases, Web Technologies).
+
+Projects (Ordered List with project titles and descriptions).
+
+Achievements (Ordered List).
+
+Strengths (Unordered List).
+
+Personal Profile (Table format with Current Location, Date of Birth, and Languages Known).-->
+
+<config>
+    <url value="http://10.10.7.151:5500"></url>
+</config>

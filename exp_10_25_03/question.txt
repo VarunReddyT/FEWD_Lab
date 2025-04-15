@@ -1,0 +1,35 @@
+<!--# E-Commerce Website Requirements-->
+<!--1. Home Page-->
+<!--•	The page title should be: -->
+<!--o	<title>Home - E-Commerce</title>-->
+<!--•	The header should contain an <h1> tag with the text: -->
+<!--o	Welcome to E-Shop!-->
+<!--•	The navigation bar should include the following links: -->
+<!--o	<a href="home.html">Home</a>-->
+<!--o	<a href="about.html">About Us</a>-->
+<!--o	<a href="products.html">Products</a>-->
+<!--o	<a href="partners.html">Partners</a>-->
+<!--o	<a href="contact.html">Contact Us</a>-->
+<!--•	The footer should contain: -->
+<!--o	<footer><p>© 2025 E-Shop. All rights reserved.</p></footer>-->
+<!--2. About Us Page-->
+<!--•	The page should include a "Our Story" section within a <div> with a class="container".-->
+<!--•	The "Our Story" section should contain a <p> tag with the text: -->
+<!--o	We are a family-owned business-->
+<!--3. Products Page-->
+<!--•	The page should display product categories inside elements with the class .category-card (replace with the actual category structure). For example: -->
+<!--o	<div class="category-card">Electronics</div>-->
+<!--o	<div class="category-card">Clothing</div>-->
+<!--o	<div class="category-card">Home Appliances</div>-->
+<!--o	Ensure the products are grouped by category.-->
+<!--4. Gallery Page-->
+<!--•	The page should display images inside elements with the class .img-fluid.-->
+<!--•	There should be at least one image displayed on the page, e.g.: -->
+<!--o	<img src="image1.jpg" class="img-fluid" alt="Gallery Image 1">-->
+<!--5. Contact Us Page-->
+<!--•	The Contact Us form should include the following required fields: -->
+<!--o	A name field: <input type="text" id="name" required>-->
+<!--o	An email field: <input type="email" id="email" required>-->
+<!--o	A message field: <textarea id="message" required></textarea>-->
+<!--•	All fields should be visible and properly labeled for accessibility.-->
+<!--bootstrap-->
