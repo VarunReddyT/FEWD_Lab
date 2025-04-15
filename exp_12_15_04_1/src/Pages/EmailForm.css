@@ -1,4 +1,3 @@
-/* Custom styles to enhance Bootstrap */
 .card {
     border-radius: 12px;
     overflow: hidden;
@@ -48,7 +47,6 @@
     letter-spacing: 0.5px;
 }
 
-/* Animation for success message */
 .alert {
     animation: fadeIn 0.5s ease-in-out;
 }

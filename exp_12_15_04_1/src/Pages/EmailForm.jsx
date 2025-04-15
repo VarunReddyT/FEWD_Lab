@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './EmailForm.css'; // We'll still use some custom CSS
+import './EmailForm.css';
 import Navbar from '../Components/Navbar';
 
 const formConfig = [
@@ -33,7 +33,6 @@ const formConfig = [
     },
 ];
 
-// Custom Dynamic Input Component
 function InputField({ type, name, placeholder, value, onChange, icon }) {
     return (
         <div className="input-group mb-3">
@@ -87,13 +86,11 @@ const EmailForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
-        
-        // Simulate API call
+
         try {
             await new Promise(resolve => setTimeout(resolve, 1000));
             console.log('Form Data:', formData);
-            
-            // Clear the form fields
+
             setFormData({
                 firstName: '',
                 lastName: '',
