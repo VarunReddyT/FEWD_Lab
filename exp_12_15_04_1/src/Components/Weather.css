@@ -1,0 +1,111 @@
+/* Weather Container */
+.weather-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  /* Weather Card */
+  .weather-card {
+    background: linear-gradient(135deg, #286ce1, #72a1f1);
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 800px; /* Increased width */
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  .weather-card h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  /* Input Container */
+  .input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .input-container input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .input-container button {
+    padding: 12px 24px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .input-container button:hover {
+    background-color: #ff3b2f;
+  }
+  
+  /* Weather Details */
+  .weather-details {
+    margin-top: 20px;
+  }
+  
+  .weather-details h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Metrics Grid */
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 15px;
+    text-align: left;
+  }
+  
+  .metric {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .metric span:first-child {
+    font-weight: bold;
+  }
+  
+  .metric span:last-child {
+    font-size: 18px;
+  }
+  
+  /* Error Message */
+  .error-message {
+    color: #ff6f61;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
