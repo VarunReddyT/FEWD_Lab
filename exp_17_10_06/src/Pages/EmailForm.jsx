@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './EmailForm.css';
-import Navbar from '../Components/Navbar';
 import axios from 'axios';
 const formConfig = [
     {
@@ -182,8 +181,6 @@ const EmailForm = () => {
 
     return (
         <div className="contact-page">
-            <Navbar />
-
             {/* Hero Section */}
             <section className="hero-section bg-primary text-white py-5">
                 <div className="container py-4">
